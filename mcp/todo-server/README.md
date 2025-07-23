@@ -24,17 +24,17 @@ uv sync
 ## Run
 
 ```sh
-fastmcp dev src/todo_server.py
-uv run python src/todo_server.py
+fastmcp dev todo_server.py
+uv run python todo_server.py
 
 # claude
-fastmcp install src/todo_server.py --name "TodoServer"
+fastmcp install todo_server.py --name "TodoServer"
 ```
 
 ## Test
 
 ```sh
-uv run python src/test_client.py
+uv run python test_client.py
 
 python test_client.py
 ```

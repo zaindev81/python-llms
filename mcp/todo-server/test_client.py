@@ -23,7 +23,6 @@ async def test_server():
                 print(f"  {status} [{todo['id']}] {todo['title']}")
             print()
 
-
             print("3. Adding a new ToDo:")
             result = await client.call_tool("add_todo", {
                 "title": "Read the FastMCP documentation"
