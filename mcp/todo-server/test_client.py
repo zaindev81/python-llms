@@ -47,13 +47,22 @@ async def test_advanced_server():
         print(f"  Created at: {todo_data['created_at']}")
         print()
 
-        # 5. Mark ToDo as completed
-        print("5. Marking ToDo as completed:")
+        # 5.1 Mark ToDo as completed
+        print("5.1 Marking ToDo as completed:")
         complete_result = await client.call_tool("complete_todo", {
             "todo_id": new_todo_id
         })
         complete_data = json.loads(complete_result.content[0].text)
         print(f"  ✅ {complete_data['message']}")
+        print()
+
+        # 5.2 Mark ToDo as incomplete
+        print("5.2 Marking ToDo as incomplete:")
+        un_complete_result = await client.call_tool("un_complete_todo", {
+            "todo_id": new_todo_id
+        })
+        un_complete_data = json.loads(un_complete_result.content[0].text)
+        print(f"  ✅ {un_complete_data['message']}")
         print()
 
         # 6. List completed ToDos

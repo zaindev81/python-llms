@@ -13,7 +13,7 @@ uv pip install fastmcp pydantic typing asyncio
 uv pip install .
 ```
 
-## Install 
+## Install
 
 ```sh
 uv venv

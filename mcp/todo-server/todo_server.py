@@ -45,6 +45,27 @@ async def add_todo(title: str, ctx: Context) -> Dict[str, Any]:
     }
 
 @mcp.tool()
+async def un_complete_todo(todo_id: int, ctx: Context) -> Dict[str, Any]:
+    """Mark a ToDo item as incomplete"""
+    await ctx.info(f"Marking ToDo as incomplete: ID {todo_id}")
+
+    for todo in todos:
+        if todo.id == todo_id:
+            todo.completed = False
+            await ctx.info(f"ToDo marked as incomplete: {todo.title}")
+            return {
+                "success": True,
+                "todo": todo.model_dump(),
+                "message": f"ToDo '{todo.title}' marked as incomplete"
+            }
+
+    await ctx.warning(f"ToDo not found for ID: {todo_id}")
+    return {
+        "success": False,
+        "message": f"ToDo with ID {todo_id} not found"
+    }
+
+@mcp.tool()
 async def complete_todo(todo_id: int, ctx: Context) -> Dict[str, Any]:
     """Mark a ToDo item as completed"""
     await ctx.info(f"Marking ToDo as complete: ID {todo_id}")
