@@ -1,4 +1,4 @@
-# server
+# simple-server
 
 ## Setup
 
@@ -12,7 +12,7 @@ source .venv/bin/activate
 uv pip install fastmcp
 ```
 
-## Install 
+## Install
 
 ```sh
 uv venv

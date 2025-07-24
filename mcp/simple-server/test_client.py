@@ -17,6 +17,9 @@ async def test_server():
             result = await client.call_tool("add", {"a": 10, "b": 5})
             print(f"  add(10, 5) = {result.content[0].text}")
 
+            result = await client.call_tool("subtract", {"a": 10, "b": 5})
+            print(f"  subtract(10, 5) = {result.content[0].text}")
+
             result = await client.call_tool("multiply", {"a": 3, "b": 7})
             print(f"  multiply(3, 7) = {result.content[0].text}")
             print()
