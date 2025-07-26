@@ -4,6 +4,7 @@
 
 - https://github.com/modelcontextprotocol/python-sdk
 - https://modelcontextprotocol.io/introduction
+- https://github.com/modelcontextprotocol/python-sdk/tree/main/examples
 
 ## fastmcp
 
