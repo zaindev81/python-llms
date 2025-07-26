@@ -38,3 +38,21 @@ uv run python test_client.py
 
 python test_client.py
 ```
+
+## Claude Desktop
+
+1. Setup Claude MCP configuration in Claude Desktop
+2. Restart Claude Desktop
+
+```sh
+vim ~/Library/Application\ Support/Claude/claude_desktop_config.json
+
+{
+  "mcpServers": {
+    "todo-server": {
+      "command": "uv",
+      "args": ["run", "python", "/path/to/your/todo_server.py"]
+    }
+  }
+}
+```
