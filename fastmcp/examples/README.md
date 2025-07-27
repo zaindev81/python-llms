@@ -6,7 +6,7 @@
 uv init
 uv venv
 source .venv/bin/activate
-uv pip install fastmcp
+uv pip install fastmcp aiohttp
 ```
 
 ## Install
@@ -27,6 +27,10 @@ uv run python src/test_basic.py
 # echo
 uv run python src/echo.py
 uv run python src/test_echo.py
+
+# file
+uv run python src/file.py
+uv run python src/test_file.py
 
 # config
 uv run src/config_server.py
